@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Event Example</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <h1>Click the button</h1>
+  <button id="myButton">Me!</button>
+
+  <script>
+    $(document).ready(function() {
+      $('#myButton').on('click', () => {
+        console.log('Hello');
+      });
+
+      $('#myButton').on('click', () => {
+        console.log('There!');
+      });
+
+      $('#myButton').trigger('click');
+      $('#myButton').off('click');
+    });
+  </script>
+</body>
+</html>
